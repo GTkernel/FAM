@@ -1,0 +1,17 @@
+#ifndef BUILD_TIME_OPTIONS_H
+#define BUILD_TIME_OPTIONS_H
+
+#cmakedefine OPT_WR_WINDOW @OPT_WR_WINDOW@
+#cmakedefine OPT_COALESCE_GAP @OPT_COALESCE_GAP@
+#cmakedefine01 USE_TIMING_INSTRUMENTATION
+#cmakedefine01 VERTEX_COALESCING
+
+namespace famgraph {
+namespace build_options {
+  inline constexpr uint32_t opt_wr_window = OPT_WR_WINDOW;
+  inline constexpr uint32_t opt_coalesce_gap = OPT_COALESCE_GAP;
+  inline constexpr bool timing_instrumentation = USE_TIMING_INSTRUMENTATION;
+  inline constexpr bool vertex_coalescing = VERTEX_COALESCING;
+}// namespace build_options
+}// namespace famgraph
+#endif// BUILD_TIME_OPTIONS_H
